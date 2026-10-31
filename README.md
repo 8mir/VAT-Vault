@@ -1,6 +1,6 @@
 <div align="center">
-
-<img src="assets/app-icon.png" width="110" height="110" alt="VAT Vault App Icon" />
+   
+<img width="1200" height="675" alt="iphone-to-mac-demo" src="https://github.com/user-attachments/assets/c3ddc959-8e6a-4aac-a291-c0df3ecf41f2" />
 
 
 **Smart VAT Invoice Manager, Vision OCR & Instant iPhone-to-Mac Scanner**  
@@ -64,6 +64,7 @@
 2. **تطبيق الآيفون (`VAt Iphone`)**:
    - افتح المشروع `VAt Iphone/VAt Iphone.xcodeproj` في **Xcode 16+**.
    - شغّل التطبيق على جهاز الـ iPhone المتصل بنفس شبكة الـ Wi-Fi الخاصة بالماك، وامسح رمز الـ QR من نافذة **ربط iPhone** في تطبيق الماك.
+<img width="1200" height="675" alt="workflow-preview" src="https://github.com/user-attachments/assets/2c5142f9-29b5-4687-a552-562964c3e180" />
 
 ---
 
