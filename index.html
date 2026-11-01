@@ -68,6 +68,24 @@
       box-shadow: 0 0 20px 4px rgba(16, 185, 129, 0.7);
       animation: scanline 3s ease-in-out infinite;
     }
+    /* Interactive Phone Scan Animation Keyframes */
+    @keyframes phoneScanFloat {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(-1deg); }
+    }
+    @keyframes laserBeamMove {
+      0%, 100% { top: 15%; opacity: 0.4; }
+      50% { top: 80%; opacity: 1; }
+    }
+    @keyframes dataFly {
+      0% { transform: translate(0, 0) scale(0.8); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translate(220px, -60px) scale(1); opacity: 0; }
+    }
+    .phone-anim { animation: phoneScanFloat 4s ease-in-out infinite; }
+    .moving-laser { animation: laserBeamMove 2.5s ease-in-out infinite; }
+    .flying-packet { animation: dataFly 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite; }
+    
     .draggable-container { cursor: grab; overflow-x: auto; user-select: none; }
     .draggable-container:active { cursor: grabbing; }
     ::-webkit-scrollbar { width: 8px; height: 8px; }
@@ -82,7 +100,7 @@
   <header class="sticky top-0 z-50 border-b border-white/5 bg-[#07080a]/80 backdrop-blur-xl">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3 group">
-        <!-- App Icon Representation -->
+        <!-- App Icon -->
         <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-700 p-0.5 shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition">
           <div class="w-full h-full bg-zinc-950 rounded-[14px] flex items-center justify-center">
             <svg class="w-6 h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
@@ -100,7 +118,7 @@
       </a>
 
       <nav class="hidden md:flex items-center gap-7 text-sm text-zinc-400">
-        <a href="#preview-section" class="hover:text-white transition" data-i18n="nav_preview">Live Workflow</a>
+        <a href="#interactive-scan-demo" class="hover:text-white transition" data-i18n="nav_preview">Live Scan Demo</a>
         <a href="#ocr-section" class="hover:text-white transition" data-i18n="nav_ocr">Vision OCR</a>
         <a href="#quarters-section" class="hover:text-white transition" data-i18n="nav_quarters">Quarters</a>
         <a href="#download-section" class="hover:text-white transition" data-i18n="nav_download">Download</a>
@@ -121,11 +139,11 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="pt-16 pb-12 px-4 sm:px-6">
+  <section class="pt-16 pb-10 px-4 sm:px-6">
     <div class="max-w-4xl mx-auto text-center">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-zinc-300 mb-6 shadow-inner">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span data-i18n="hero_badge">APPLE SILICON OPTIMIZED · SWIFTUI &amp; SWIFTDATA</span>
+        <span data-i18n="hero_badge">APPLE VISION OCR · 100% OFFLINE SECURE</span>
       </div>
 
       <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white leading-[1.12] mb-6">
@@ -133,13 +151,12 @@
         <span class="bg-gradient-to-r from-emerald-400 via-teal-300 to-sky-400 bg-clip-text text-transparent" data-i18n="hero_title_2">effortlessly organized.</span>
       </h1>
 
-      <p class="text-base sm:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed mb-10" data-i18n="hero_subtitle">
-        The native vault for your business and personal tax receipts. Powered by Apple Vision OCR for instant, 100% offline invoice scanning on Mac, iPhone, and iPad.
+      <p class="text-base sm:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed mb-8" data-i18n="hero_subtitle">
+        Capture receipts with your iPhone, extract tax data instantly via Apple Vision OCR, and organize your Q1–Q4 returns locally across Mac, iPhone, and iPad.
       </p>
 
-      <!-- Multi-Platform Download Buttons (macOS + iOS) -->
-      <div class="flex flex-wrap items-center justify-center gap-4 mb-6">
-        <!-- macOS DMG Button -->
+      <!-- Download Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-4">
         <a href="https://github.com/8mir/VAT-Vault/releases" target="_blank" rel="noopener"
            class="flex items-center gap-3.5 px-7 py-4 rounded-2xl bg-white text-zinc-950 font-bold text-sm hover:bg-zinc-200 transition shadow-2xl">
           <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 24 24">
@@ -147,11 +164,10 @@
           </svg>
           <div class="text-start">
             <div data-i18n="btn_mac">Download for macOS</div>
-            <div class="text-[11px] font-mono font-normal text-zinc-600">Universal DMG · Apple Silicon &amp; Intel</div>
+            <div class="text-[11px] font-mono font-normal text-zinc-600">Universal DMG · Apple Silicon</div>
           </div>
         </a>
 
-        <!-- iOS / TestFlight Button -->
         <a href="https://github.com/8mir/VAT-Vault" target="_blank" rel="noopener"
            class="flex items-center gap-3.5 px-7 py-4 rounded-2xl glass-card text-white font-bold text-sm hover:bg-white/10 transition">
           <svg class="w-6 h-6 text-emerald-400 shrink-0" fill="currentColor" viewBox="0 0 24 24">
@@ -159,39 +175,72 @@
           </svg>
           <div class="text-start">
             <div data-i18n="btn_ios">Get for iOS &amp; iPadOS</div>
-            <div class="text-[11px] font-mono font-normal text-zinc-400">App Store &amp; TestFlight Source</div>
+            <div class="text-[11px] font-mono font-normal text-zinc-400">App Store &amp; GitHub Source</div>
           </div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- LIVE ANIMATED GIF / WORKFLOW PREVIEW SECTION -->
-  <section id="preview-section" class="py-12 px-4 sm:px-6">
+  <!-- INTERACTIVE LIVE ANIMATED DEMO: iPhone Scanning & Vault Transfer -->
+  <section id="interactive-scan-demo" class="py-12 px-4 sm:px-6">
     <div class="max-w-5xl mx-auto">
-      <div class="glass-panel rounded-3xl p-4 sm:p-6 mac-shadow border border-white/10">
-        <div class="flex items-center justify-between px-3 pb-3 mb-3 border-b border-white/5 text-xs font-mono text-zinc-400">
-          <div class="flex items-center gap-2">
-            <span class="w-3 h-3 rounded-full bg-[#ff5f57]"></span>
-            <span class="w-3 h-3 rounded-full bg-[#febc2e]"></span>
-            <span class="w-3 h-3 rounded-full bg-[#28c840]"></span>
-            <span class="ms-2 text-zinc-300 font-bold">VAT-Vault-Workflow.gif</span>
-          </div>
-          <span class="text-emerald-400">● LIVE PREVIEW</span>
+      <div class="glass-panel rounded-3xl p-6 sm:p-10 mac-shadow border border-white/10 relative overflow-hidden">
+        
+        <div class="text-center max-w-xl mx-auto mb-8">
+          <div class="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-2">INTERACTIVE LIVE DEMO</div>
+          <h2 class="text-2xl sm:text-3xl font-black text-white" data-i18n="demo_title">Watch how a receipt becomes a tax record.</h2>
+          <p class="text-zinc-400 text-xs sm:text-sm mt-1" data-i18n="demo_subtitle">Phone scans paper invoice → Apple Vision OCR extracts tokens → Automatically saved to SwiftData Vault.</p>
         </div>
 
-        <!-- GIF Container with Auto-Fallback -->
-        <div class="relative rounded-2xl overflow-hidden bg-zinc-950 border border-white/5 flex items-center justify-center min-h-[300px]">
-          <!-- Replace demo.gif with your actual animated GIF filename in GitHub repository -->
-          <img id="workflowGif" src="./demo.gif" alt="VAT Vault Workflow Animation" class="w-full h-auto object-cover rounded-2xl" 
-               onerror="this.style.display='none'; document.getElementById('fallbackGifNotice').style.display='block';" />
+        <!-- SVG Live Animation Stage -->
+        <div class="relative w-full max-w-3xl mx-auto bg-zinc-950/80 rounded-2xl border border-white/10 p-6 flex flex-col sm:flex-row items-center justify-around gap-8">
           
-          <div id="fallbackGifNotice" style="display:none;" class="text-center p-8">
-            <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mx-auto mb-4 text-emerald-400 text-2xl font-mono">▶</div>
-            <h3 class="text-white font-bold text-lg mb-1" data-i18n="gif_fallback_title">Animated Workflow Showcase</h3>
-            <p class="text-zinc-400 text-xs max-w-md mx-auto" data-i18n="gif_fallback_desc">To display your animated GIF here, ensure your file is named <code class="text-emerald-400 font-mono">demo.gif</code> in your GitHub repository root.</p>
+          <!-- Step 1: Paper Invoice / Receipt -->
+          <div class="relative w-44 bg-white text-zinc-900 rounded-xl p-4 shadow-2xl font-mono text-[10px] select-none">
+            <div class="font-bold border-b border-zinc-200 pb-1 mb-2 text-center text-xs">TAX RECEIPT</div>
+            <div class="space-y-1 text-zinc-600">
+              <div>SUPPLIER: Tech Hub</div>
+              <div>TRN: 2000194827</div>
+              <div class="text-emerald-700 font-bold">VAT (10%): 42.000 BHD</div>
+              <div class="text-black font-bold pt-1 border-t border-zinc-200">TOTAL: 462.000 BHD</div>
+            </div>
+            <!-- Laser Scan Line moving over paper -->
+            <div class="absolute left-0 right-0 h-1 bg-emerald-500 shadow-[0_0_12px_#10b981] moving-laser"></div>
           </div>
+
+          <!-- Step 2: iPhone Scanning Vector Node with Flying Data Packets -->
+          <div class="relative flex flex-col items-center">
+            <div class="phone-anim w-24 h-48 bg-zinc-900 border-2 border-zinc-700 rounded-3xl p-2 shadow-2xl flex flex-col justify-between relative overflow-hidden">
+              <div class="w-10 h-3 bg-zinc-800 rounded-full mx-auto"></div>
+              <div class="bg-emerald-500/15 border border-emerald-500/40 rounded-xl p-1 text-center">
+                <div class="text-[9px] font-mono text-emerald-400 animate-pulse">Scanning...</div>
+              </div>
+              <div class="w-8 h-1 bg-zinc-700 rounded-full mx-auto"></div>
+            </div>
+            
+            <!-- Flying Data Animation Indicator -->
+            <div class="absolute top-1/2 left-full -translate-y-1/2 hidden sm:flex items-center">
+              <div class="w-16 h-0.5 bg-gradient-to-r from-emerald-500 to-sky-400"></div>
+              <div class="w-3 h-3 rounded-full bg-emerald-400 animate-ping absolute right-0"></div>
+            </div>
+          </div>
+
+          <!-- Step 3: Vault Database Result Card -->
+          <div class="w-52 bg-emerald-950/30 border border-emerald-500/40 rounded-2xl p-4 text-xs font-mono shadow-2xl">
+            <div class="flex items-center justify-between text-emerald-400 mb-2 pb-1 border-b border-emerald-500/20">
+              <span>VAT Vault Q4</span>
+              <span>✓ Saved</span>
+            </div>
+            <div class="space-y-1 text-zinc-300 text-[11px]">
+              <div>Vendor: Tech Hub</div>
+              <div>Quarter: <span class="text-emerald-300 font-bold">Q4 2026</span></div>
+              <div class="text-emerald-400 font-bold pt-1">+42.000 BHD VAT</div>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </div>
   </section>
@@ -245,11 +294,11 @@
                   <span data-i18n="q_2">Second Quarter (Q2)</span>
                   <span class="font-mono text-[11px]">Apr – Jun</span>
                 </button>
-                <button onclick="selectQuarter('Q3')" data-q="Q3" class="q-btn w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs text-zinc-400 hover:bg-white/5 transition">
+                <button onclick="selectQuarter('Q3')" data-q="Q3" class="q-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs text-zinc-400 hover:bg-white/5 transition">
                   <span data-i18n="q_3">Third Quarter (Q3)</span>
                   <span class="font-mono text-[11px]">Jul – Sep</span>
                 </button>
-                <button onclick="selectQuarter('Q4')" data-q="Q4" class="q-btn w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs text-zinc-400 hover:bg-white/5 transition">
+                <button onclick="selectQuarter('Q4')" data-q="Q4" class="q-btn w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs text-zinc-400 hover:bg-white/5 transition">
                   <span data-i18n="q_4">Fourth Quarter (Q4)</span>
                   <span class="font-mono text-[11px]">Oct – Dec</span>
                 </button>
@@ -323,51 +372,6 @@
     </div>
   </section>
 
-  <!-- Section 1: Vision OCR Engine -->
-  <section id="ocr-section" class="py-20 px-4 sm:px-6 border-t border-white/5">
-    <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-      <div class="lg:col-span-5 space-y-4">
-        <div class="text-xs font-mono uppercase tracking-widest text-emerald-400">APPLE VISION FRAMEWORK</div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight" data-i18n="ocr_title">
-          One snap. Every detail in place.
-        </h2>
-        <p class="text-zinc-400 text-sm sm:text-base leading-relaxed" data-i18n="ocr_desc">
-          No more manual spreadsheet entry. VAT Vault reads paper receipts or PDF invoices instantly, parsing vendor names, dates, TRN numbers, and VAT amounts with extreme precision.
-        </p>
-      </div>
-
-      <div class="lg:col-span-7">
-        <div class="glass-panel rounded-3xl p-6 relative overflow-hidden">
-          <div class="ocr-laser"></div>
-          <div class="flex items-center justify-between text-xs font-mono text-zinc-400 mb-4 pb-3 border-b border-white/10">
-            <span>RECEIPT_SCANNER_CORE.HEIC</span>
-            <span class="text-emerald-400">● 100% OFFLINE</span>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="p-4 rounded-2xl bg-zinc-950/80 border border-white/5 font-mono text-xs space-y-2 text-zinc-400 text-left" dir="ltr">
-              <div class="text-[10px] text-zinc-500 uppercase">RAW OCR TOKENS</div>
-              <div class="p-2 rounded bg-white/[0.03] text-zinc-200">AL-NOOR TECH SUPPLIES</div>
-              <div class="p-2 rounded bg-white/[0.03]">TRN: <span class="text-sky-400">200019482700002</span></div>
-              <div class="p-2 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-300">VAT (10%): 42.000 BHD</div>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-emerald-950/15 border border-emerald-500/20 flex flex-col justify-between">
-              <div>
-                <div class="text-[10px] font-mono text-emerald-400 uppercase mb-3">SWIFTDATA RECORD</div>
-                <div class="space-y-2 text-xs">
-                  <div class="flex justify-between border-b border-white/5 pb-1.5"><span class="text-zinc-400">Quarter:</span><span class="font-mono text-emerald-300 font-bold">Q4 · 2026</span></div>
-                  <div class="flex justify-between"><span class="text-zinc-400">Status:</span><span class="text-white font-bold">Verified ✓</span></div>
-                </div>
-              </div>
-              <div class="mt-3 pt-2 border-t border-white/10 text-[11px] font-mono text-emerald-400">Saved securely to Vault</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Download Footer CTA -->
   <section id="download-section" class="py-20 px-4 sm:px-6 border-t border-white/5">
     <div class="max-w-4xl mx-auto glass-panel rounded-3xl p-8 sm:p-12 text-center">
@@ -396,17 +400,19 @@
   <script>
     const translations = {
       en: {
-        nav_preview: "Live Workflow",
+        nav_preview: "Live Scan Demo",
         nav_ocr: "Vision OCR",
         nav_quarters: "Quarters",
         nav_download: "Download",
         nav_get_app: "Get App",
-        hero_badge: "APPLE SILICON OPTIMIZED · SWIFTUI & SWIFTDATA",
+        hero_badge: "APPLE VISION OCR · 100% OFFLINE SECURE",
         hero_title_1: "Your VAT invoices,",
         hero_title_2: "effortlessly organized.",
-        hero_subtitle: "The native vault for your business and personal tax receipts. Powered by Apple Vision OCR for instant, 100% offline invoice scanning on Mac, iPhone, and iPad.",
+        hero_subtitle: "Capture receipts with your iPhone, extract tax data instantly via Apple Vision OCR, and organize your Q1–Q4 returns locally across Mac, iPhone, and iPad.",
         btn_mac: "Download for macOS",
         btn_ios: "Get for iOS & iPadOS",
+        demo_title: "Watch how a receipt becomes a tax record.",
+        demo_subtitle: "Phone scans paper invoice → Apple Vision OCR extracts tokens → Automatically saved to SwiftData Vault.",
         sidebar_title: "Financial Quarters · 2026",
         q_all: "All Quarters (Annual)",
         q_1: "First Quarter (Q1)",
@@ -425,8 +431,6 @@
         th_net: "Net Amount",
         th_vat: "VAT Amount",
         hint_drag: "💡 Tip: Click and drag the table horizontally or search instantly above.",
-        ocr_title: "One snap. Every detail in place.",
-        ocr_desc: "No more manual spreadsheet entry. VAT Vault reads paper receipts or PDF invoices instantly, parsing vendor names, dates, TRN numbers, and VAT amounts with extreme precision.",
         cta_title: "Get VAT Vault today.",
         cta_subtitle: "Open source, free, and designed for macOS, iOS & iPadOS.",
         qLabels: {
@@ -438,17 +442,19 @@
         }
       },
       ar: {
-        nav_preview: "العرض المتحرك",
+        nav_preview: "عرض المسح الحي",
         nav_ocr: "المسح الذكي OCR",
         nav_quarters: "الأرباع المالية",
         nav_download: "التحميل",
         nav_get_app: "تحميل التطبيق",
-        hero_badge: "مصمم لأجهزة أبل · SwiftUI & SwiftData",
+        hero_badge: "محرك Apple Vision OCR · آمن وبدون إنترنت",
         hero_title_1: "فواتيرك الضريبية،",
         hero_title_2: "منظمة بكل سهولة.",
-        hero_subtitle: "الخزنة المحلية الآمنة لفواتيرك الضريبية. مدعوم بمحرك Apple Vision OCR للمسح الفوري وبدون إنترنت على الماك، الآيفون، والآيباد.",
+        hero_subtitle: "امسح الفواتير بهاتفك الآيفون، استخرج البيانات الضريبية فوراً عبر Apple Vision OCR، ورتب إقراراتك الفصلية محلياً بين الماك والآيفون والآيباد.",
         btn_mac: "تحميل لنظام macOS",
         btn_ios: "نسخة iOS و iPadOS",
+        demo_title: "شاهد كيف تتحول الفاتورة الورقية إلى إقرار ضريبي.",
+        demo_subtitle: "الكاميرا تمسح الإيصال ← محرك Vision OCR يستخرج البيانات ← تُحفظ تلقائياً في خزنة SwiftData.",
         sidebar_title: "الأرباع المالية · 2026",
         q_all: "كل الأرباع (السنوي)",
         q_1: "الربع الأول (Q1)",
@@ -467,13 +473,8 @@
         th_net: "المبلغ الصافي",
         th_vat: "قيمة الضريبة",
         hint_drag: "💡 نصيحة: انقر واسحب الجدول أفقياً للمعاينة أو استخدم البحث الفوري بالأعلى.",
-        ocr_title: "لقطة واحدة. كل تفصيلة في مكانها.",
-        ocr_desc: "لا داعي لإدخال الأرقام يدوياً. يقرأ VAT Vault الفواتير الورقية أو الرقمية بدقة فائقة ويستخرج التواريخ والضرائب فوراً.",
         cta_title: "احصل على VAT Vault الآن.",
         cta_subtitle: "مفتوح المصدر، مجاني، ومصمم خصيصاً لأنظمة macOS و iOS و iPadOS.",
         qLabels: {
           ALL: "ملخص الضريبة المجمّع · جميع الأرباع 2026",
-          Q1: "ملخص الضريبة · الربع الأول (Q1 - 2026)",
-          Q2: "ملخص الضريبة · الربع الثاني (Q2 - 2026)",
-          Q3: "ملخص الضريبة · الربع الثالث (Q3 - 2026)",
-          Q4: "
+          Q1: "ملخص الض
