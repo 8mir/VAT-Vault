@@ -802,4 +802,352 @@
         bubble_1_title: "Tech & Hardware",
         bubble_1_sub: "BHD VAT · 45%",
         bubble_2_title: "Print & Materials",
-        
+        bubble_2_sub: "BHD VAT · 28%",
+        bubble_3_title: "Cloud Services",
+        bubble_3_sub: "BHD · 16%",
+        bubble_4_title: "Operations",
+        bubble_4_sub: "BHD · 11%",
+        safe_title: "Two rules. No surprises.",
+        safe_desc: "Your financial records and receipts never leave your device to any external cloud server.",
+        rule_1_title: "100% On-Device Vision OCR Processing",
+        rule_1_desc: "Receipts and PDFs are processed directly on Apple Silicon Neural Engine without uploading sensitive invoices to third-party APIs.",
+        rule_2_title: "Original Receipts Preserved with Instant Undo",
+        rule_2_desc: "High-res receipt attachments are stored alongside structured SwiftData records, and deleted items go to temporary Trash first.",
+        toolkit_title: "Small app. Whole accounting toolkit.",
+        feat_1_title: "Smart Vision OCR",
+        feat_1_desc: "Instant extraction of merchant names, dates, and tax totals from photos & PDFs.",
+        feat_2_title: "Quarterly Grouping (Q1–Q4)",
+        feat_2_desc: "Automatic sorting into the right fiscal quarter the moment a transaction date is read.",
+        feat_3_title: "Duplicate Invoice Guard",
+        feat_3_desc: "Smart alerts if the same receipt is scanned twice based on TRN, date, and total.",
+        feat_4_title: "Native Glassmorphic UI",
+        feat_4_desc: "Crafted in SwiftUI with dark translucent panels that feel right at home on macOS & iOS.",
+        feat_5_title: "One-Click Tax Reports",
+        feat_5_desc: "Generate clean CSV tables and PDF summaries ready for quarterly VAT return filings.",
+        feat_6_title: "Free & Open Source",
+        feat_6_desc: "No ads, no subscriptions, and full transparency with complete source code on GitHub.",
+        faq_heading: "Questions.",
+        faq_1_q: "Does VAT Vault require an internet connection to scan invoices?",
+        faq_1_a: "No. It uses Apple's built-in Vision framework on macOS and iOS, meaning text recognition and VAT extraction happen 100% offline at native speed.",
+        faq_2_q: "Which platforms does VAT Vault run on?",
+        faq_2_a: "It runs natively on Mac (Apple Silicon and Intel) as well as iPhone and iPad thanks to its unified SwiftUI and SwiftData architecture.",
+        faq_3_q: "Why does macOS show a warning on first launch?",
+        faq_3_a: "Because the app is open-source and distributed directly via GitHub. You can bypass Gatekeeper in one second using the Terminal command shown below.",
+        cta_title: "Get VAT Vault.",
+        cta_subtitle: "Free and open-source for macOS and iOS.",
+        cta_btn_dmg: "Download for macOS · DMG",
+        cta_btn_github: "Open on GitHub ↗",
+        terminal_hint: "To run on macOS after dragging to Applications, run once in Terminal:",
+        copy_btn: "Copy Command",
+        copied_btn: "Copied ✓",
+        footer_built: "· Built with SwiftUI, SwiftData & Vision OCR",
+        qLabels: {
+          ALL: "CONSOLIDATED VAT SUMMARY · ALL QUARTERS 2026",
+          Q1: "VAT SUMMARY · FIRST QUARTER (Q1 - 2026)",
+          Q2: "VAT SUMMARY · SECOND QUARTER (Q2 - 2026)",
+          Q3: "VAT SUMMARY · THIRD QUARTER (Q3 - 2026)",
+          Q4: "VAT SUMMARY · FOURTH QUARTER (Q4 - 2026)"
+        }
+      },
+      ar: {
+        nav_preview: "العرض المتحرك",
+        nav_ocr: "المسح الذكي OCR",
+        nav_quarters: "الأرباع المالية",
+        nav_privacy: "الخصوصية",
+        nav_features: "المميزات",
+        nav_faq: "الأسئلة",
+        nav_download: "تحميل التطبيق",
+        hero_title_1: "فواتيرك الضريبية،",
+        hero_title_2: "أخف وأذكى.",
+        hero_subtitle: "يلتقط VAT Vault فواتير المشتريات والمبيعات، يستخرج التواريخ وأسماء المتاجر ومبالغ الضريبة تلقائياً عبر محرك Apple Vision OCR، ويُرتبها حسب الأرباع المالية بلمسة واحدة.",
+        btn_mac_download: "تحميل لنظام macOS",
+        btn_source_code: "استعراض الكود المصدري",
+        search_placeholder: "ابحث باسم المتجر أو الرقم الضريبي...",
+        sidebar_quarters_title: "الأرباع المالية · 2026",
+        q_all: "كل الأرباع (السنوي)",
+        q_1: "الربع الأول (Q1)",
+        q_1_months: "يناير - مارس",
+        q_2: "الربع الثاني (Q2)",
+        q_2_months: "أبريل - يونيو",
+        q_3: "الربع الثالث (Q3)",
+        q_3_months: "يوليو - سبتمبر",
+        q_4: "الربع الرابع (Q4)",
+        q_4_months: "أكتوبر - ديسمبر",
+        ocr_accuracy_label: "دقة الاستخراج OCR",
+        currency_vat_label: "د.ب (BHD) ضريبة مستردة",
+        net_total_label: "إجمالي الفواتير الصافية قبل الضريبة:",
+        currency_short: "د.ب",
+        invoice_count_label: "عدد الفواتير:",
+        scan_btn_text: "مسح فاتورة جديدة (OCR)",
+        scanning_progress: "جاري قراءة الفاتورة عبر Vision OCR...",
+        metric_1_title: "نسبة الضريبة المعتمدة",
+        metric_1_sub: "كشف تلقائي",
+        metric_2_title: "حالة الأرشفة",
+        metric_2_val: "محفوظ محلياً",
+        metric_3_title: "متوسط زمن المسح",
+        metric_4_title: "تصدير التقارير",
+        metric_4_sub: "جاهز للإقرار الضريبي",
+        th_merchant: "المتجر / المورد",
+        th_trn: "الرقم الضريبي (TRN)",
+        th_date: "التاريخ",
+        th_quarter: "الربع",
+        th_net: "المبلغ الصافي",
+        th_vat: "الضريبة (VAT)",
+        interactive_hint: "جرّب بنفسك — النافذة أعلاه تفاعلية بالكامل! اضغط على الأرباع المالية أو زر \"مسح فاتورة جديدة\".",
+        export_shortcut: "↵ للتصدير الفوري",
+        gif_sec_title: "من صورة الفاتورة إلى الإقرار الضريبي في ثوانٍ.",
+        gif_sec_desc: "شاهد كيف يقوم VAT Vault بمسح الإيصالات واستخراج البيانات عبر Vision OCR وتصنيفها داخل الأرباع المالية تلقائياً.",
+        ocr_sec_title: "لقطة واحدة. كل تفصيلة في مكانها.",
+        ocr_sec_desc: "لا مزيد من إدخال الأرقام يدوياً في جداول معقدة. يعتمد VAT Vault على إطار Apple Vision لقراءة الفواتير الورقية والإلكترونية بالعربية والإنجليزية، واستخلاص اسم المورد، التاريخ، الإجمالي، وقيمة الضريبة في أجزاء من الثانية.",
+        ocr_bullet_1: "التعرف التلقائي على صيغ التواريخ المتعددة وتحديد الربع المالي",
+        ocr_bullet_2: "استخراج الرقم الضريبي (TRN / VAT ID) والتحقق من صحته",
+        ocr_bullet_3: "فصل ذكي بين المبلغ الخاضع للضريبة والضريبة المضافة",
+        raw_tokens_label: "النص الخام الملتقط · RAW TEXT",
+        swiftdata_model_label: "الكائن المستخرج · SwiftData @Model",
+        parsed_merchant_key: "المتجر:",
+        parsed_merchant_val: "شركة النور للتقنية",
+        parsed_q_key: "الربع المالي التلقائي:",
+        parsed_net_key: "الصافي:",
+        parsed_vat_key: "قيمة الضريبة:",
+        map_title: "شاهد أين تذهب ضرائبك.",
+        map_desc: "يتحول كل قطاع مصروفات وربع مالي إلى فقاعة تفاعلية؛ كلما كبرت الفقاعة زاد حجم الضريبة المستحقة أو المستردة بداخلها.",
+        bubble_1_title: "معدات وأجهزة تقنية",
+        bubble_1_sub: "د.ب ضريبة · 45%",
+        bubble_2_title: "مواد خام ومطبوعات",
+        bubble_2_sub: "د.ب ضريبة · 28%",
+        bubble_3_title: "خدمات سحابية",
+        bubble_3_sub: "د.ب · 16%",
+        bubble_4_title: "مصاريف تشغيلية",
+        bubble_4_sub: "د.ب · 11%",
+        safe_title: "قاعدتان ذهبيتان. بدون مفاجآت.",
+        safe_desc: "بياناتك المالية وفواتيرك لا تغادر جهازك أبداً إلى أي خادم خارجي.",
+        rule_1_title: "المعالجة بالكامل على الجهاز (On-Device OCR)",
+        rule_1_desc: "تتم قراءة الصور والملفات عبر شريحة Apple Silicon مباشرة داخل جهازك دون إرسال صور الفواتير إلى أي واجهة برمجية سحابية خارجية.",
+        rule_2_title: "الفواتير الأصلية محفوظة دائماً مع إمكانية التراجع",
+        rule_2_desc: "تُحفظ نسخة من صورة الفاتورة الأصلية بجانب البيانات المستخرجة في قاعدة بيانات SwiftData، وعند الحذف تنتقل لسلة المهملات المؤقتة أولاً.",
+        toolkit_title: "تطبيق خفيف. أدوات محاسبية متكاملة.",
+        feat_1_title: "المسح البصري الذكي (Vision OCR)",
+        feat_1_desc: "التقاط فوري لأسماء المتاجر والتواريخ والإجماليات من الصور وملفات PDF.",
+        feat_2_title: "تجميع الأرباع المالية (Q1–Q4)",
+        feat_2_desc: "فرز آلي لكل فاتورة في الربع السنوي المناسب بمجرد قراءة تاريخ المعاملة.",
+        feat_3_title: "كشف الفواتير المكررة",
+        feat_3_desc: "تنبيه ذكي في حال رفع نفس الفاتورة مرتين بناءً على الرقم الضريبي والتاريخ والمبلغ.",
+        feat_4_title: "واجهة Glassmorphic أصلية",
+        feat_4_desc: "مصمم بلغة SwiftUI ليبدو جزءاً أصيلاً من نظام macOS و iOS بالوضع الداكن.",
+        feat_5_title: "تصدير تقارير الضريبة",
+        feat_5_desc: "توليد ملفات CSV وملخصات PDF جاهزة للتقديم في الإقرارات الضريبية الفصلية.",
+        feat_6_title: "مفتوح المصدر ومجاني",
+        feat_6_desc: "بدون إعلانات أو اشتراكات شهرية، مع توفر الكود الكامل على GitHub.",
+        faq_heading: "أسئلة شائعة.",
+        faq_1_q: "هل يحتاج التطبيق إلى اتصال بالإنترنت لقراءة الفواتير؟",
+        faq_1_a: "لا. يعتمد التطبيق على مكتبة Apple Vision المدمجة في نظام macOS و iOS، مما يعني أن قراءة النصوص واستخراج الضريبة يتم محلياً بنسبة 100% وبسرعة فائقة.",
+        faq_2_q: "ما الأنظمة التي يعمل عليها VAT Vault؟",
+        faq_2_a: "يعمل على أجهزة Mac (بمعالجات Apple Silicon و Intel) بالإضافة إلى أجهزة iPhone و iPad بفضل بناء المشروع باستخدام SwiftUI و SwiftData.",
+        faq_3_q: "لماذا تظهر رسالة تنبيه من macOS عند فتح التطبيق لأول مرة؟",
+        faq_3_a: "لأن التطبيق مفتوح المصدر ويتم تحميله مباشرة من GitHub؛ يمكنك تخطي تنبيه Gatekeeper بسهولة عبر تنفيذ أمر واحد في الـ Terminal كما هو موضح في قسم التحميل بالأسفل.",
+        cta_title: "احصل على VAT Vault.",
+        cta_subtitle: "مجاني ومفتوح المصدر لنظامي macOS و iOS.",
+        cta_btn_dmg: "تحميل نسخة macOS · DMG",
+        cta_btn_github: "فتح المشروع على GitHub ↗",
+        terminal_hint: "لتشغيل التطبيق مباشرة على macOS بعد نقله لمجلد Applications:",
+        copy_btn: "نسخ الأمر (Copy)",
+        copied_btn: "تم النسخ ✓",
+        footer_built: "· صُمم وطُوّر باستخدام SwiftUI & Vision OCR",
+        qLabels: {
+          ALL: "ملخص الضريبة المجمّع · جميع الأرباع 2026",
+          Q1: "ملخص الضريبة · الربع الأول (Q1 - 2026)",
+          Q2: "ملخص الضريبة · الربع الثاني (Q2 - 2026)",
+          Q3: "ملخص الضريبة · الربع الثالث (Q3 - 2026)",
+          Q4: "ملخص الضريبة · الربع الرابع (Q4 - 2026)"
+        }
+      }
+    };
+
+    const invoices = [
+      { merchant_ar: "شركة النور للتقنية", merchant_en: "Al-Noor Tech Supplies", trn: "200019482700002", date: "2026-02-14", quarter: "Q1", net: 320.000, vat: 32.000 },
+      { merchant_ar: "مطبعة الخليج الحديثة", merchant_en: "Gulf Modern Press", trn: "200055391000003", date: "2026-03-22", quarter: "Q1", net: 185.000, vat: 18.500 },
+      { merchant_ar: "أبل ستور - معدات مكتبية", merchant_en: "Apple Store — Office Gear", trn: "200099123400001", date: "2026-05-10", quarter: "Q2", net: 540.000, vat: 54.000 },
+      { merchant_ar: "خدمات أمازون السحابية AWS", merchant_en: "Amazon Web Services AWS", trn: "200077211900004", date: "2026-07-19", quarter: "Q3", net: 210.500, vat: 21.050 },
+      { merchant_ar: "مؤسسة البحرين للتوريدات", merchant_en: "Bahrain Supply Corp", trn: "200033817200002", date: "2026-10-04", quarter: "Q4", net: 390.000, vat: 39.000 },
+      { merchant_ar: "مركز التصميم الرقمي", merchant_en: "Digital Design Studio", trn: "200061900400005", date: "2026-10-25", quarter: "Q4", net: 200.000, vat: 20.000 }
+    ];
+
+    const extraScanPool = [
+      { merchant_ar: "شركة الاتصالات المتقدمة", merchant_en: "Advanced Telecom Co.", trn: "200088441200001", date: "2026-11-01", quarter: "Q4", net: 95.000, vat: 9.500 },
+      { merchant_ar: "قرطاسية ومستلزمات المكتب", merchant_en: "Office Stationery Hub", trn: "200044198200009", date: "2026-06-12", quarter: "Q2", net: 64.000, vat: 6.400 },
+      { merchant_ar: "استوديو الإبداع للطباعة", merchant_en: "Creative Print Studio", trn: "200011938400007", date: "2026-08-29", quarter: "Q3", net: 150.000, vat: 15.000 }
+    ];
+
+    let currentLang = 'en';
+    let currentQuarter = 'ALL';
+    let searchQuery = '';
+
+    const candidateGifPaths = [
+      "./demo.gif",
+      "./preview.gif",
+      "./vat-vault.gif",
+      "./assets/demo.gif",
+      "./assets/preview.gif",
+      "./screenshots/demo.gif",
+      "https://raw.githubusercontent.com/8mir/VAT-Vault/main/demo.gif",
+      "https://raw.githubusercontent.com/8mir/VAT-Vault/main/preview.gif",
+      "https://raw.githubusercontent.com/8mir/VAT-Vault/main/assets/demo.gif"
+    ];
+
+    function tryLoadRepoAnimation() {
+      const imgEl = document.getElementById('repoAnimatedPreview');
+      let idx = 0;
+      function tryNext() {
+        if (idx >= candidateGifPaths.length) return;
+        const testImg = new Image();
+        const url = candidateGifPaths[idx++];
+        testImg.onload = () => {
+          imgEl.src = url;
+          imgEl.classList.remove('hidden');
+          document.getElementById('svgAnimatedShowcase').classList.add('mt-4');
+        };
+        testImg.onerror = tryNext;
+        testImg.src = url;
+      }
+      tryNext();
+    }
+
+    function applyLanguage(lang) {
+      currentLang = lang;
+      const htmlEl = document.documentElement;
+      htmlEl.setAttribute('lang', lang);
+      htmlEl.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+      document.getElementById('langToggleText').textContent = lang === 'ar' ? 'English' : 'العربية';
+      document.getElementById('liveSearchInput').placeholder = translations[lang].search_placeholder;
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      document.getElementById('activeQuarterLabel').textContent = translations[lang].qLabels[currentQuarter];
+      renderInvoices();
+    }
+
+    function toggleLanguage() {
+      const nextLang = currentLang === 'en' ? 'ar' : 'en';
+      applyLanguage(nextLang);
+    }
+
+    function renderInvoices() {
+      const tbody = document.getElementById('invoiceTableBody');
+      const filtered = invoices.filter(item => {
+        const matchesQ = (currentQuarter === 'ALL' || item.quarter === currentQuarter);
+        const nameAr = item.merchant_ar.toLowerCase();
+        const nameEn = item.merchant_en.toLowerCase();
+        const q = searchQuery.toLowerCase();
+        const matchesS = nameAr.includes(q) || nameEn.includes(q) || item.trn.includes(q);
+        return matchesQ && matchesS;
+      });
+
+      tbody.innerHTML = filtered.map(inv => {
+        const displayName = currentLang === 'ar' ? inv.merchant_ar : inv.merchant_en;
+        return `
+          <tr class="hover:bg-white/[0.03] transition">
+            <td class="py-3 font-sans font-bold text-white pe-4">${displayName}</td>
+            <td class="py-3 text-zinc-400 px-4">${inv.trn}</td>
+            <td class="py-3 text-zinc-400 px-4">${inv.date}</td>
+            <td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-white/5 text-zinc-300 text-[10px]">${inv.quarter}</span></td>
+            <td class="py-3 text-zinc-300 px-4">${inv.net.toFixed(3)}</td>
+            <td class="py-3 text-emerald-400 font-bold ps-4">+${inv.vat.toFixed(3)}</td>
+          </tr>
+        `;
+      }).join('');
+
+      const totalNet = filtered.reduce((acc, cur) => acc + cur.net, 0);
+      const totalVat = filtered.reduce((acc, cur) => acc + cur.vat, 0);
+
+      document.getElementById('totalNetDisplay').textContent = totalNet.toFixed(3);
+      document.getElementById('totalVatDisplay').textContent = totalVat.toFixed(3);
+      document.getElementById('invoiceCountDisplay').textContent = filtered.length;
+    }
+
+    function selectQuarter(q) {
+      currentQuarter = q;
+      document.querySelectorAll('.q-btn').forEach(btn => {
+        if (btn.getAttribute('data-q') === q) {
+          btn.className = "q-btn w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 transition";
+        } else {
+          btn.className = "q-btn w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs text-zinc-400 hover:bg-white/5 transition";
+        }
+      });
+
+      document.getElementById('activeQuarterLabel').textContent = translations[currentLang].qLabels[q];
+      renderInvoices();
+    }
+
+    function simulateNewScan() {
+      const btn = document.getElementById('scanBtn');
+      const btnText = document.getElementById('scanBtnText');
+      btnText.textContent = translations[currentLang].scanning_progress;
+      btn.disabled = true;
+
+      setTimeout(() => {
+        const randomNum = Math.floor(Math.random() * 90 + 10);
+        const nextItem = extraScanPool.shift() || {
+          merchant_ar: "فاتورة مشتريات جديدة #" + randomNum,
+          merchant_en: "New Purchase Receipt #" + randomNum,
+          trn: "2000" + Math.floor(10000000000 + Math.random() * 89999999999),
+          date: "2026-11-02",
+          quarter: currentQuarter === 'ALL' ? 'Q4' : currentQuarter,
+          net: 120.000,
+          vat: 12.000
+        };
+        invoices.unshift(nextItem);
+        renderInvoices();
+        btnText.textContent = translations[currentLang].scan_btn_text;
+        btn.disabled = false;
+      }, 650);
+    }
+
+    function copyCommand() {
+      navigator.clipboard.writeText('xattr -cr /Applications/VAT-Vault.app');
+      const btn = document.getElementById('copyBtn');
+      btn.textContent = translations[currentLang].copied_btn;
+      setTimeout(() => { btn.textContent = translations[currentLang].copy_btn; }, 2000);
+    }
+
+    document.getElementById('liveSearchInput').addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      renderInvoices();
+    });
+
+    // Enable Grab-and-Drag scrolling for tables and overflow elements
+    const slider = document.getElementById('dragTableScroll');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      slider.classList.add('active');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+    slider.addEventListener('mouseup', () => {
+      isDown = false;
+    });
+    slider.addEventListener('mousemove', (e) => {
+      if(!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 2; // scroll-fast multiplier
+      slider.scrollLeft = scrollLeft - walk;
+    });
+
+    applyLanguage('en');
+    tryLoadRepoAnimation();
+  </script>
+</body>
+</html>
