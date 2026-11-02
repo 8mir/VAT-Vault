@@ -2,7 +2,7 @@
 
 <img src="assets/app-icon.png" width="110" height="110" alt="VAT Vault App Icon" />
 
-# VAT Vault — خزنة الضريبة
+<img width="1200" height="675" alt="iphone-to-mac-demo" src="https://github.com/user-attachments/assets/f7aad588-de63-4380-9f96-394799cfc8a6" />
 
 **Smart VAT Invoice Manager, Vision OCR & Instant iPhone-to-Mac Scanner**  
 **نظام ذكي لإدارة فواتير القيمة المضافة مع قراءة ضوئية تلقائية وربط لاسلكي مباشر بين الآيفون والماك**
